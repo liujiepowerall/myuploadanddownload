@@ -1,0 +1,13 @@
+{
+    "version": "0.0.1",
+    "name": "com.powerall.plugin.uploadanddownload",
+    "cordova_name": "UploadAndDownLoad",
+    "description": "upload and download file plugin description",
+    "license": "Apache 2.0",
+    "keywords": [
+        "powerall",
+        "upload download",
+        "liujie"
+    ],
+    "engines": []
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.powerall.plugin.myuploadanddownload"
+    version="0.0.1">
+
+    <name>UploadAndDownloadPlugin</name>
+    <description>upload and download file plugin description</description>
+    <license>Apache 2.0</license>
+	<keywords>powerall,up and down,powerall</keywords>
+	
+	<js-module src="www/uploadanddownloadPlugin.js" name="uploadAndDownloadPlugin">
+		<clobbers target="upAndDown" />
+	</js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="UploadAndDownloadPlugin">
+                <param name="android-package" value="com.powerall.plugin.upanddown.UploadAndDownloadPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+    		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />			
+        </config-file>
+
+        <source-file src="src/android/UploadAndDownloadPlugin.java" target-dir="src/com/powerall/plugin/upanddown" />
+		<source-file src="src/android/FileInfo.java" target-dir="src/com/powerall/plugin/upanddown" />
+		<source-file src="src/android/MyAdapter.java" target-dir="src/com/powerall/plugin/upanddown" />
+		<source-file src="src/android/MyFileManager.java" target-dir="src/com/powerall/plugin/upanddown" />
+		<source-file src="res/values/color.xml" target-dir="res/values" />
+		<source-file src="res/layout/file_row.xml" target-dir="res/layout" />
+		<source-file src="res/layout/fileselect.xml" target-dir="res/layout" />
+		<source-file src="res/drawable-mdpi/back01.png" target-dir="res/drawable-mdpi" />
+		<source-file src="res/drawable-mdpi/back02.png" target-dir="res/drawable-mdpi" />
+		<source-file src="res/drawable-mdpi/doc.png" target-dir="res/drawable-mdpi" />
+		<source-file src="res/drawable-mdpi/folder.png" target-dir="res/drawable-mdpi" />
+		<source-file src="res/drawable/listview_selected.xml" target-dir="res/drawable" />
+    </platform>  
+
+</plugin>
