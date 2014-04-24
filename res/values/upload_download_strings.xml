@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="return_root">返回根目录..</string>
-    <string name="return_partent">返回上一层..</string>
+    <string name="return_parent">返回上一层..</string>
 </resources>
