@@ -8,8 +8,6 @@ import java.util.List;
 import org.apache.cordova.CallbackContext;
 
 import com.phonegap.ecommunity.R;
-import com.powerall.plugin.md5.GetMd5Plugin;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DownloadManager;

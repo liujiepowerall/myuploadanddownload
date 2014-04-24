@@ -32,6 +32,7 @@
 		<source-file src="src/android/MyAdapter.java" target-dir="src/com/powerall/plugin/upanddown" />
 		<source-file src="src/android/MyFileManager.java" target-dir="src/com/powerall/plugin/upanddown" />
 		<source-file src="res/values/color.xml" target-dir="res/values" />
+		<source-file src="res/values/upload_download_strings.xml" target-dir="res/values" />	
 		<source-file src="res/layout/file_row.xml" target-dir="res/layout" />
 		<source-file src="res/layout/fileselect.xml" target-dir="res/layout" />
 		<source-file src="res/drawable-mdpi/back01.png" target-dir="res/drawable-mdpi" />
