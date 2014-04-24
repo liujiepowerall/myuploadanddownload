@@ -27,6 +27,7 @@ import android.util.Log;
 import android.webkit.MimeTypeMap;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
+import android.widget.Toast;
 
 public class UploadAndDownloadPlugin extends CordovaPlugin {
 
@@ -59,6 +60,7 @@ public class UploadAndDownloadPlugin extends CordovaPlugin {
 			downloadFile(null,downloadPath);
 			mContext.registerReceiver(receiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));  
 			callbackContext.success();
+			notification(R.string.download_start);
 		}
         return false;
     }
@@ -125,12 +127,14 @@ public class UploadAndDownloadPlugin extends CordovaPlugin {
                 Log.d(TAG, "STATUS_SUCCESSFUL");  
                 mContext.unregisterReceiver(receiver);  
                 mPrefs.edit().clear().commit(); 
+				notification(R.string.download_end);
                 break;   
             case DownloadManager.STATUS_FAILED:   
                 Log.d(TAG, "STATUS_FAILED");  
                 mDownloadManager.remove(mPrefs.getLong(DL_ID, 0));   
                 mPrefs.edit().clear().commit(); 
-                mContext.unregisterReceiver(receiver);  
+                mContext.unregisterReceiver(receiver); 
+				notification(R.string.download_error);
                 break;   
             }   
         }  
@@ -229,4 +233,9 @@ public class UploadAndDownloadPlugin extends CordovaPlugin {
     	  e.printStackTrace();
       }
     }
+	private void notification(int resId){
+		Toast toast = Toast.makeText(cordova.getActivity(), cordova.getActivity().getResources.getString(resId), Toast.LENGTH_SHORT); 
+		toast.show();
+	}
+	
 }

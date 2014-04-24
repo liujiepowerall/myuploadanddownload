@@ -2,4 +2,7 @@
 <resources>
     <string name="return_root">返回根目录..</string>
     <string name="return_parent">返回上一层..</string>
+	<string name="download_start">已转入后台下载</string>
+	<string name="download_end">下载已完成</string>
+	<string name="download_error">下载错误</string>
 </resources>
