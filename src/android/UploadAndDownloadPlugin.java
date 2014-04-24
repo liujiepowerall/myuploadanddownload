@@ -27,6 +27,9 @@ import android.util.Log;
 import android.webkit.MimeTypeMap;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
+
+import com.phonegap.ecommunity.R;
+
 import android.widget.Toast;
 
 public class UploadAndDownloadPlugin extends CordovaPlugin {
@@ -234,7 +237,7 @@ public class UploadAndDownloadPlugin extends CordovaPlugin {
       }
     }
 	private void notification(int resId){
-		Toast toast = Toast.makeText(cordova.getActivity(), cordova.getActivity().getResources.getString(resId), Toast.LENGTH_SHORT); 
+		Toast toast = Toast.makeText(cordova.getActivity(), cordova.getActivity().getResources().getString(resId), Toast.LENGTH_SHORT); 
 		toast.show();
 	}
 	
