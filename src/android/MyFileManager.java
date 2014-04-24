@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.apache.cordova.CallbackContext;
 
-import com.phonegap.ecommunity.R;
+import com.phonegap.leho.R;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DownloadManager;

@@ -28,7 +28,7 @@ import android.webkit.MimeTypeMap;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 
-import com.phonegap.ecommunity.R;
+import com.phonegap.leho.R;
 
 import android.widget.Toast;
 
