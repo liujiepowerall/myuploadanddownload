@@ -1,4 +1,4 @@
-﻿package com.powerall.plugin.upanddown;
+package com.powerall.plugin.upanddown;
 
 import java.io.File;
 import java.util.List;
