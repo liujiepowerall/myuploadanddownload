@@ -12,13 +12,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
@@ -37,7 +36,7 @@ public class UploadAndDownloadPlugin extends CordovaPlugin {
     private DownloadManager mDownloadManager;
     private String downloadPath;
     private static final String DL_ID = "upandroiddown.downloadId";
-    private static final String HEADER = "file://";  
+    //private static final String HEADER = "file://";  
     private String mStoragePath;
     
     public static final int STATUS_UPLOAD = 1;
@@ -58,6 +57,7 @@ public class UploadAndDownloadPlugin extends CordovaPlugin {
 			//dg.show();
 
 			downloadFile(null,downloadPath);
+			mContext.registerReceiver(receiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));  
 			callbackContext.success();
 		}
         return false;

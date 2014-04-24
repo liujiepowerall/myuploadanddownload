@@ -2,7 +2,6 @@ package com.powerall.plugin.upanddown;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.apache.cordova.CallbackContext;
@@ -11,20 +10,15 @@ import com.phonegap.ecommunity.R;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DownloadManager;
-import android.app.ListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.view.View;
 public class MyFileManager extends Dialog {
 	
