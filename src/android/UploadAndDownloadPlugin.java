@@ -140,7 +140,8 @@ public class UploadAndDownloadPlugin extends CordovaPlugin {
 				notification(R.string.download_error);
                 break;   
             }   
-        }  
+        } 
+        c.close();
     }  
     
     public BroadcastReceiver receiver = new BroadcastReceiver() {   
